@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# 帮助中心为单页应用（hash 路由），无需 sitemap

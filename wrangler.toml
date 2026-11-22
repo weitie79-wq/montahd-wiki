@@ -1,0 +1,9 @@
+name = "montahd-wiki"
+compatibility_date = "2026-11-01"
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"
+html_handling = "auto-trailing-slash"
+
+# 绑定自定义域名（部署后在 Cloudflare 控制台 Workers → 设置 → 自定义域 里添加）
+# 例如 wiki.montahd.com
