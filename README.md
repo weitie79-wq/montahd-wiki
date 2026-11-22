@@ -1,7 +1,10 @@
 # Monta HD 帮助中心
 
-Monta HD 的公开文档站：注册、登录、客户端配置、字幕、排错与账号规范。
+Monta HD 的公开文档站：注册、登录、客户端配置、求片机器人、字幕、排错与账号规范。
 纯静态、零依赖、深色优先，可直接部署到 Cloudflare Workers / Pages 或任意静态托管。
+
+- 在线预览：<https://weitie79-wq.github.io/montahd-wiki/>
+- 仓库：<https://github.com/weitie79-wq/montahd-wiki>
 
 ```
 montahd-wiki/
@@ -42,7 +45,13 @@ python3 -m http.server 8080
 
 ## 部署
 
-### Cloudflare Workers（推荐，与 montahd.com 同栈）
+### GitHub Pages（已配置）
+
+推到 `main` 即自动部署：`.github/workflows/pages.yml` 会执行 `./deploy.sh` 并把 `dist/` 发布到
+<https://weitie79-wq.github.io/montahd-wiki/>。`deploy.sh` 同时生成 `404.html`，
+访问不存在的路径也会回到首页，不会出现 GitHub 的 404 页面。
+
+### Cloudflare Workers（与 montahd.com 同栈）
 
 ```sh
 ./deploy.sh            # 只构建出 dist/

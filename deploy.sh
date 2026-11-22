@@ -12,6 +12,7 @@ sed -i "s/?v=[0-9A-Za-z._-]*/?v=$VER/g" index.html
 rm -rf dist
 mkdir -p dist/assets
 cp index.html robots.txt dist/
+cp index.html dist/404.html
 cp assets/style.css assets/app.js assets/content.js dist/assets/
 
 echo "→ 产物："
