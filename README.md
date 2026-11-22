@@ -3,7 +3,8 @@
 Monta HD 的公开文档站：注册、登录、客户端配置、求片机器人、字幕、排错与账号规范。
 纯静态、零依赖、深色优先，可直接部署到 Cloudflare Workers / Pages 或任意静态托管。
 
-- 在线预览：<https://weitie79-wq.github.io/montahd-wiki/>
+- 在线地址：<https://wiki.montahd.com/>
+- 备用地址：<https://weitie79-wq.github.io/montahd-wiki/>（会自动跳转到自定义域）
 - 仓库：<https://github.com/weitie79-wq/montahd-wiki>
 
 ```
@@ -80,9 +81,9 @@ python3 -m http.server 8080
 - 搜索为纯前端索引（标题权重 8、正文 3），支持 `⌘K` / `/` 聚焦、上下键选择、回车跳转；
 - 无任何外部字体、CDN 或第三方脚本，断网也能完整渲染。
 
-## 自定义域名
+## 自定义域名（已启用）
 
-目标：`https://wiki.montahd.com`
+<https://wiki.montahd.com> 已绑定，Let's Encrypt 证书由 Pages 自动续期，强制 HTTPS 已开启。下面是记录配置，供迁移或重建时参考。
 
 1. Cloudflare DNS 添加记录：`CNAME` / 名称 `wiki` / 目标 `weitie79-wq.github.io` / **仅 DNS**（灰云，先别开代理）；
 2. 仓库 Settings → Pages → Custom domain 填 `wiki.montahd.com` 并保存；
