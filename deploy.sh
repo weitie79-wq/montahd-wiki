@@ -15,6 +15,7 @@ cp index.html robots.txt dist/
 sed -i "s/?v=[0-9A-Za-z._-]*/?v=$VER/g" dist/index.html
 cp dist/index.html dist/404.html
 cp assets/style.css assets/app.js assets/content.js dist/assets/
+[ -f CNAME ] && cp CNAME dist/ || true
 
 echo "→ 产物："
 find dist -type f -maxdepth 2 -exec ls -lh {} \; | awk '{print "  " $9 "  " $5}'
