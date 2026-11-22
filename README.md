@@ -80,6 +80,21 @@ python3 -m http.server 8080
 - 搜索为纯前端索引（标题权重 8、正文 3），支持 `⌘K` / `/` 聚焦、上下键选择、回车跳转；
 - 无任何外部字体、CDN 或第三方脚本，断网也能完整渲染。
 
+## 自定义域名
+
+目标：`https://wiki.montahd.com`
+
+1. Cloudflare DNS 添加记录：`CNAME` / 名称 `wiki` / 目标 `weitie79-wq.github.io` / **仅 DNS**（灰云，先别开代理）；
+2. 仓库 Settings → Pages → Custom domain 填 `wiki.montahd.com` 并保存；
+3. 等 DNS 检查通过后勾选 Enforce HTTPS。
+
+也可以在仓库根目录放一个内容为 `wiki.montahd.com` 的 `CNAME` 文件，效果相同——但**必须等 DNS 记录生效后再放**，
+否则 `github.io` 地址会立刻 301 到还没解析的域名。
+
+## License
+
+代码与文档以 [MIT](LICENSE) 发布；Monta HD 名称、标识、片库内容与站点规则不在授权范围内。
+
 ## 内容维护提醒
 
 - 站点规则、价格、并发数等以后台与群公告为准，文中统一写「以群公告为准」，避免文档过期；
